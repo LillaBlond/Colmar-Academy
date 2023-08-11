@@ -1,8 +1,88 @@
-
-
-header{
+*{
+    padding: 0;
+    margin: 0;
+   border: 1px solid red;
+}
+html{
+    font-size: 16px;
+}
+/*-- header for full screen */
+.header-laptop{
     height: 64px;
+    width: 100%;
     position: fixed;
-    display: inline;
+    display: flex;
+    box-sizing: border-box;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     background-color: white;
+    padding: 0px 1rem;
+    align-items: center;
+}
+
+.header-laptop #logo{
+    display: flex;
+    align-items: center;
+}
+
+/*header for mobile screen*/
+.header-mobile{
+    position: fixed;
+    box-sizing: border-box;
+    max-height: 64px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    visibility: hidden;
+    
+}
+
+header ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header li{
+    display: inline;
+    margin: auto 16px;
+}
+
+@media only screen and (max-width: 480px) {
+    .header-laptop{
+       visibility:hidden;
+    }
+   .header-mobile{
+       visibility:visible;
+   }
+}
+.main{
+    margin-top: 64px;
+}
+
+.banner-section{
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+}
+
+
+.banner-section img{
+    width: 100%;
+    height: auto;
+    min-width: 475px;
+}
+
+#banner-section-text{
+    margin: auto 1.5rem auto;
+    min-width: 200px;
+}
+
+#banner-section-text p, h1{
+    padding: 1.5rem 0;
+}
+
+footer{
+    margin: 1rem;
 }
