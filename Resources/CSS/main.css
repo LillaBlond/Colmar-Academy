@@ -75,12 +75,18 @@ header li{
 }
 
 #banner-section-text{
-    margin: auto 1.5rem auto;
+    margin: auto 5% auto 1.5rem;
     min-width: 200px;
 }
 
 #banner-section-text p, h1{
     padding: 1.5rem 0;
+}
+
+#banner-section-text #button{
+    text-align: center;
+    background-color: grey;
+    color: white;
 }
 
 footer{
