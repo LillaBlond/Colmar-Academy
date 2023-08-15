@@ -4,14 +4,13 @@
    border: 1px solid red;
    box-sizing: border-box;
 }
-
 html{
     font-size: 16px;
     color: rgb(82, 82, 82);
 }
 
 body{
-    //max-width: 935px;
+    min-width: 935px;
 }
 
 a{
@@ -22,8 +21,8 @@ a{
     height: 64px;
     width: 100%;
     position: fixed;
-    top: 0px;
     display: flex;
+    box-sizing: border-box;
     flex-flow: row nowrap;
     justify-content: space-between;
     background-color: white;
@@ -34,13 +33,12 @@ a{
 .header-laptop #logo{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 /*header for mobile screen*/
 .header-mobile{
     position: fixed;
-    top: 0px;
+    box-sizing: border-box;
     max-height: 64px;
     width: 100%;
     padding: 1rem 1.5rem;
@@ -61,107 +59,6 @@ header li{
     margin: auto 16px;
 }
 
-.banner-section{
-    flex-wrap:nowrap;
-    width: 100%;
-    min-width: 800px;
-    overflow:hidden;
-    padding: 2rem 1.5rem;
-    display: flex;
-    background-color: lightgrey;
-}
-
-.banner-img{
-    width: 60%;
-    height: auto;
-    min-width: 475px;
-}
-
-
-
-#banner-section-text{
-    margin: auto 5% auto 1.5rem;
-    min-width: 240px;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-#banner-section-text p, h1{
-    padding: 1.5rem 0;
-}
-
-
-#banner-section-text #button{
-    text-align: center;
-    background-color: rgb(82, 82, 82); 
-    color: white;
-    padding: 1rem 0;
-}
-
-.main{
-    margin-top: 64px;
-    min-width: 800px;
-}
-
-
-.information-section-laptop{
-    display: flex;
-}
-.main-information{
-    padding: 2rem 1.5rem;
-    width: 60%;
-}
-.main-information h1{
-    padding: 2rem auto 1.5rem auto;
-}
-
-aside{
-    margin: 2rem 0;
-}
-
-.small-info-squares{
-    padding: 2rem 0;
-    border-left: 0.5px solid lightgrey;
-    width: 40%;
-}
-
-#orientation{
-    padding: 0 1rem 1rem;
-    border-bottom: 0.5px solid lightgrey;    
-    display: flex;
-}
-
-#our-campus{
-    padding: 1rem;
-    border-bottom: 0.5px solid lightgrey; 
-    border-top: 0.5px solid lightgrey;  
-    display: flex;
-}
-
-#guest-lecture{
-    padding: 1rem;
-    border-bottom: 0.5px solid lightgrey;    
-    display: flex;
-    background-color: lightgrey;
-}
-
-#square-text{
-    display:flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 0 0 0 1.5rem;
-}
-
-#square-text p{
-    margin: 1.5rem auto;
-}
-
-.information-section-mobile{
-    display: none;
-    flex-flow: column nowrap;
-    padding: 1rem 1rem 2rem 1rem;
-}
-
 @media only screen and (max-width: 480px) {
     body{
         min-width: 300px;
@@ -174,45 +71,39 @@ aside{
    .header-mobile{
        display: flex;
    }
+}
+.main{
+    margin-top: 64px;
+}
 
-   .banner-section{
-    flex-wrap: wrap;
-    min-width: 300px;
-   }
-
-   .banner-img{
+.banner-section{
     width: 100%;
-    min-width: 200px;
-   }
-
-   .information-section-laptop{
-    display: none;
-    }
-
-    .information-section-mobile{
-        display: flex;
-        border-bottom: 0.5px solid lightgray;
-    }
-
-    #banner-section-text #button{
-        background-color: grey;
-    }
-
-    .square-text{
-        padding: 2rem 1rem;
-    }
-
-    .square-text p{
-        margin: 1rem 0;
-    }
-
-
+    padding: 1.5rem;
+    display: flex;
 }
 
 
+.banner-section img{
+    width: 100%;
+    height: auto;
+    min-width: 475px;
+}
 
+#banner-section-text{
+    margin: auto 5% auto 1.5rem;
+    min-width: 200px;
+}
+
+#banner-section-text p, h1{
+    padding: 1.5rem 0;
+}
+
+#banner-section-text #button{
+    text-align: center;
+    background-color: grey;
+    color: white;
+}
 
 footer{
     margin: 1rem;
-    min-width: 700px;
 }
