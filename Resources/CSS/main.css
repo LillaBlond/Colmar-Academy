@@ -1,7 +1,11 @@
 *{
-    padding: 0;
     margin: 0;
-   border: 1px solid red;Resources\CSS\main.css
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+   border: 1px solid red;
 }
 html{
     font-size: 16px;
@@ -9,6 +13,7 @@ html{
 
 body{
     min-width: 700px;
+    box-sizing: border-box;
 }
 
 a{
@@ -17,15 +22,17 @@ a{
 /*-- header for full screen */
 .header-laptop{
     height: 64px;
-    width: 100%;
+    width: 98%;
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     box-sizing: border-box;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     padding: 0px 1rem;
-    align-items: center;
 }
 
 .header-laptop #logo{
@@ -36,11 +43,12 @@ a{
 /*header for mobile screen*/
 .header-mobile{
     position: fixed;
+    top: 0;
+    left: 0;
     box-sizing: border-box;
-    max-height: 64px;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    display: flex;
+    height: 64px;
+    width: 98%;
+    padding: 0.7rem 1.5rem;
     justify-content: space-between;
     background-color: white;
     display: none;
@@ -48,21 +56,20 @@ a{
 }
 
 header ul{
-    display: flex;
-    flex-wrap: nowrap;
+    
 }
 
 header li{
     display: inline;
-    margin: auto 16px;
+    padding: 0 16px;
 }
 
 @media only screen and (max-width: 480px) {
     .header-laptop{
-       visibility:hidden;
+       display: none;
     }
    .header-mobile{
-       visibility:visible;
+       display: flex;
    }
 }
 .main{
@@ -96,7 +103,9 @@ header li{
     text-align: center;
     background-color: grey;
     color: white;
-.information-section-laptop{
+}
+
+    .information-section-laptop{
     visibility: visible;
     display: flex;
 }
@@ -104,6 +113,7 @@ header li{
     padding: 2rem 1.5rem;
     width: 60%;
 }
+
 .main-information h1{
     padding: 2rem auto 1.5rem auto;
 }
