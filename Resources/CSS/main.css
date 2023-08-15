@@ -2,19 +2,10 @@
     padding: 0;
     margin: 0;
    border: 1px solid red;
-   box-sizing: border-box;
 }
 html{
     font-size: 16px;
     color: rgb(82, 82, 82);
-}
-
-body{
-    min-width: 935px;
-}
-
-a{
-    color: rgb(83, 110, 232);
 }
 /*-- header for full screen */
 .header-laptop{
@@ -60,16 +51,11 @@ header li{
 }
 
 @media only screen and (max-width: 480px) {
-    body{
-        min-width: 300px;
-    }
-
     .header-laptop{
-       display: none;
+       visibility:hidden;
     }
-
    .header-mobile{
-       display: flex;
+       visibility:visible;
    }
 }
 .main{
