@@ -1,11 +1,18 @@
 *{
     padding: 0;
     margin: 0;
-   border: 1px solid red;
+   border: 1px solid red;Resources\CSS\main.css
 }
 html{
     font-size: 16px;
-    color: rgb(82, 82, 82);
+}
+
+body{
+    min-width: 700px;
+}
+
+a{
+    color: rgb(83, 110, 232);
 }
 /*-- header for full screen */
 .header-laptop{
@@ -69,6 +76,7 @@ header li{
 }
 
 
+
 .banner-section img{
     width: 100%;
     height: auto;
@@ -87,6 +95,103 @@ header li{
 #banner-section-text #button{
     text-align: center;
     background-color: grey;
+    color: white;
+.information-section-laptop{
+    visibility: visible;
+    display: flex;
+}
+.main-information{
+    padding: 2rem 1.5rem;
+    width: 60%;
+}
+.main-information h1{
+    padding: 2rem auto 1.5rem auto;
+}
+
+aside{
+    margin: 2rem 0;
+}
+
+.small-info-squares{
+    padding: 2rem 0;
+    border-left: 0.5px solid lightgrey;
+    width: 40%;
+}
+
+#orientation{
+    padding: 0 1rem 1rem;
+    border-bottom: 0.5px solid lightgrey;    
+    display: flex;
+}
+
+#our-campus{
+    padding: 1rem;
+    border-bottom: 0.5px solid lightgrey; 
+    border-top: 0.5px solid lightgrey;  
+    display: flex;
+}
+
+#guest-lecture{
+    padding: 1rem;
+    border-bottom: 0.5px solid lightgrey;    
+    display: flex;
+    background-color: lightgrey;
+}
+
+#square-text{
+    display:flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+}
+
+.information-section-mobile{
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 480px) {
+    .header-laptop{
+       visibility:hidden;
+    }
+   .header-mobile{
+       visibility:visible;
+   }
+   .banner-section{
+    flex-wrap: wrap;
+    min-width: 300px;
+   }
+   .banner-img{
+    width: 100%;
+    min-width: 200px;
+   }
+   .information-section-laptop{
+    visibility: hidden;
+    }
+    .information-section-mobile{
+        visibility: visible;
+    }
+
+}
+.main{
+    margin-top: 64px;
+    min-width: 800px;
+}
+
+
+#banner-section-text{
+    margin: auto 5% auto 1.5rem;
+    min-width: 240px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#banner-section-text p, h1{
+    padding: 1.5rem 0;
+}
+
+#banner-section-text #button{
+    text-align: center;
+    background-color: darkslategrey;
     color: white;
 }
 
