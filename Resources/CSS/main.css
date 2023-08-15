@@ -1,16 +1,17 @@
 *{
     padding: 0;
     margin: 0;
-   //border: 1px solid red;
+   border: 1px solid red;
    box-sizing: border-box;
 }
 
 html{
     font-size: 16px;
+    color: rgb(82, 82, 82);
 }
 
 body{
-    min-width: 700px;
+    //max-width: 935px;
 }
 
 a{
@@ -46,7 +47,7 @@ a{
     display: flex;
     justify-content: space-between;
     background-color: white;
-    visibility: hidden;
+    display: none;
     
 }
 
@@ -70,14 +71,40 @@ header li{
     background-color: lightgrey;
 }
 
-
 .banner-img{
     width: 60%;
     height: auto;
     min-width: 475px;
 }
+
+
+
+#banner-section-text{
+    margin: auto 5% auto 1.5rem;
+    min-width: 240px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#banner-section-text p, h1{
+    padding: 1.5rem 0;
+}
+
+
+#banner-section-text #button{
+    text-align: center;
+    background-color: rgb(82, 82, 82); 
+    color: white;
+    padding: 1rem 0;
+}
+
+.main{
+    margin-top: 64px;
+    min-width: 800px;
+}
+
+
 .information-section-laptop{
-    visibility: visible;
     display: flex;
 }
 .main-information{
@@ -121,59 +148,69 @@ aside{
 #square-text{
     display:flex;
     flex-flow: column;
-    justify-content: space-evenly;
-    padding: 1.5rem;
+    justify-content: center;
+    padding: 0 0 0 1.5rem;
+}
+
+#square-text p{
+    margin: 1.5rem auto;
 }
 
 .information-section-mobile{
-    visibility: hidden;
+    display: none;
+    flex-flow: column nowrap;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 @media only screen and (max-width: 480px) {
-    .header-laptop{
-       visibility:hidden;
+    body{
+        min-width: 300px;
     }
+
+    .header-laptop{
+       display: none;
+    }
+
    .header-mobile{
-       visibility:visible;
+       display: flex;
    }
+
    .banner-section{
     flex-wrap: wrap;
     min-width: 300px;
    }
+
    .banner-img{
     width: 100%;
     min-width: 200px;
    }
+
    .information-section-laptop{
-    visibility: hidden;
+    display: none;
     }
+
     .information-section-mobile{
-        visibility: visible;
+        display: flex;
+        border-bottom: 0.5px solid lightgray;
     }
 
-}
-.main{
-    margin-top: 64px;
-    min-width: 800px;
+    #banner-section-text #button{
+        background-color: grey;
+    }
+
+    .square-text{
+        padding: 2rem 1rem;
+    }
+
+    .square-text p{
+        margin: 1rem 0;
+    }
+
+
 }
 
 
-#banner-section-text{
-    margin: auto 5% auto 1.5rem;
-    min-width: 240px;
-    display: flex;
-    flex-flow: column nowrap;
-}
 
-#banner-section-text p, h1{
-    padding: 1.5rem 0;
-}
-
-#banner-section-text #button{
-    text-align: center;
-    background-color: darkslategrey;
-    color: white;
-}
 
 footer{
     margin: 1rem;
