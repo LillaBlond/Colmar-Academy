@@ -33,6 +33,7 @@ a{
     align-items: center;
     background-color: white;
     padding: 0px 1.5rem;
+    z-index: 10;
 }
 
 .header-laptop #logo{
@@ -52,6 +53,7 @@ a{
     justify-content: space-between;
     background-color: white;
     display: none;
+    z-index: 10;
     
 }
 
@@ -164,7 +166,8 @@ aside{
        display: flex;
    }
    .banner-section{
-    flex-wrap: wrap;
+    padding: 2rem 0;
+    display: block;
     min-width: 300px;
    }
    .banner-img{
