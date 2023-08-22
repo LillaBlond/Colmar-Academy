@@ -6,13 +6,17 @@
     font: inherit;
     vertical-align: baseline;
    border: 1px solid red;
+   display:block;
+   box-sizing: border-box;
 }
-html{
+html, body{
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 body{
-    min-width: 700px;
     box-sizing: border-box;
 }
 
@@ -23,7 +27,6 @@ a{
 .header-laptop{
     height: 64px;
     width: 100%;
-    min-width: 550px;
     position: fixed;
     top: 0;
     left: 0;
@@ -62,20 +65,19 @@ header li{
     padding: 0 0.5rem;
 }
 
-
+/*Main frame */
 
 .main{
-    position: absolute;
-    top: 64px;
-    left: 0;
+    margin-top: 64px;
     width: 100%;
-    min-width: 700px;
 }
 
+/* the first banner section*/
 .banner-section{
     padding: 2rem 1.5rem;
     display: flex;
     background-color: lightgrey;
+    width: 100%
 }
 
 .banner-img{
@@ -102,7 +104,9 @@ header li{
     color: white;
 }
 
-.information-section-laptop{
+/* the second section - information section*/
+
+.information-section{
 display: flex;
 flex-flow: row nowrap;
 width: 100%;
@@ -124,13 +128,25 @@ aside{
     padding: 2rem 0;
     border-left: 0.5px solid lightgrey;
     width: 40%;
-    min-width: 400px;
+    height: auto;
 }
 
 #orientation{
     padding: 0 1rem 1rem;
     border-bottom: 0.5px solid lightgrey;    
     display: flex;
+    align-items: flex-start;
+    height: 33%;
+}
+
+#orientation-image{
+    background-image: url("../images/information-orientation.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 150px;
 }
 
 #our-campus{
@@ -138,6 +154,17 @@ aside{
     border-bottom: 0.5px solid lightgrey; 
     border-top: 0.5px solid lightgrey;  
     display: flex;
+    align-items: flex-start;
+    height: 33%;
+}
+
+#our-campus-image{
+    background-image: url("../images/information-campus.jpg");
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 150px;
 }
 
 #guest-lecture{
@@ -145,6 +172,18 @@ aside{
     border-bottom: 0.5px solid lightgrey;    
     display: flex;
     background-color: lightgrey;
+    align-items: flex-start;
+    height: 34%;
+}
+
+#guest-lecture-image{
+    background-image: url("../images/information-guest-lecture.jpg");
+    background-size: cover;
+    width: 35%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 150px;
+
 }
 
 #square-text{
@@ -152,10 +191,9 @@ aside{
     flex-flow: column;
     justify-content: space-evenly;
     padding: 3%;
-}
-
-.information-section-mobile{
-    display: none;
+    margin: auto auto auto 0px;
+    flex: 0.5 0.5 200px;
+    min-height: 100px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -165,21 +203,69 @@ aside{
    .header-mobile{
        display: flex;
    }
+
+   .main{
+    margin-top: 0;
+   }
+
    .banner-section{
     padding: 2rem 0;
     display: block;
-    min-width: 300px;
    }
    .banner-img{
     width: 100%;
-    min-width: 200px;
    }
-   .information-section-laptop{
+
+   .information-section{
+    display: block;
+   }
+
+   .main-information{
     display: none;
     }
-    .information-section-mobile{
-        display: contents;
+
+    #square-text{
+    width: 100%;
     }
+    #orientation, #our-campus, #guest-lecture{
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .small-info-squares{
+        border-left: none;
+        width: 100%;
+        display: block;
+    }
+
+    #orientation{
+        border-bottom:none;
+    }
+
+    #orientation-image{
+        background-image: url("../images/information-orientation-mobile.jpg");
+    }
+
+    #our-campus-image{
+        background-image: url("../images/information-campus-mobile.jpg");
+
+    }
+
+    #guest-lecture{
+        background-color: white;
+    }
+    #guest-lecture-image{
+        background-image: url("../images/information-guest-lecture-mobile.jpg");
+
+    }
+
+    #orientation-image, #guest-lecture-image, #our-campus-image{
+        width: 100%;
+        height: auto;
+        min-height: 150px;
+    }
+
 
 }
 
