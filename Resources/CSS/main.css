@@ -4,7 +4,6 @@
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline;
    border: 1px solid red;
    display:block;
    box-sizing: border-box;
@@ -14,22 +13,38 @@ html, body{
     margin: 0;
     padding: 0;
     border: 0;
+    display:inherit;
 }
 
 body{
     box-sizing: border-box;
+    min-width: 840px;
 }
 
 a{
     color: rgb(83, 110, 232);
 }
+.grey-background{
+background-color: lightgrey;
+}
+
+h4{
+    padding: 0.5rem 0;
+}
+
+h2{
+    padding-bottom: 0.5rem;
+}
+
 /*-- header for full screen */
 .header-laptop{
     height: 64px;
     width: 100%;
+    min-width: 840px;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
@@ -76,7 +91,6 @@ header li{
 .banner-section{
     padding: 2rem 1.5rem;
     display: flex;
-    background-color: lightgrey;
     width: 100%
 }
 
@@ -171,9 +185,8 @@ aside{
     padding: 1rem;
     border-bottom: 0.5px solid lightgrey;    
     display: flex;
-    background-color: lightgrey;
     align-items: flex-start;
-    height: 34%;
+    height: 33%;
 }
 
 #guest-lecture-image{
@@ -183,7 +196,6 @@ aside{
     height: 100%;
     min-height: 100px;
     min-width: 150px;
-
 }
 
 #square-text{
@@ -194,12 +206,99 @@ aside{
     margin: auto auto auto 0px;
     flex: 0.5 0.5 200px;
     min-height: 100px;
+    width: 65%;
+}
+
+/*third section*/
+
+#start-learning{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4.5rem 2rem;
+    gap: 2rem;
+}
+
+.center{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#software-engineering, #computer-art, #design, #data, #business, #marketing{
+    max-width: 532px;
+    min-width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+#start-learning p{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 532px;
+}
+
+#start-learning .text-square{
+    padding: 1rem 1rem 1.5rem 1rem;
+}
+
+#start-learning img{
+    height: auto;
+    width: 100%;
+    min-width: 300px;
+}
+
+#thesis-exhibit{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 0 1.5rem 2rem 1.5rem;
+    border-bottom: 0.5px dotted lightgrey;
+}
+
+#thesis-exhibit-video-section{
+    width: 60%;
+    padding-right: 1.5rem;
+}
+
+#thesis-exhibit-video-section video{
+    padding-bottom:  1.5rem;
+}
+
+#thesis-exhibit img{
+    width: 35%;
+    height: auto;
+    padding-right: 1rem;
+}
+
+#thesis-text{
+    padding: 1rem; 
+    display: flex;
+    align-items: flex-start;
+    height: 33%;
+}
+
+footer{
+    margin: 0.5rem 1.5rem 3rem;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+    padding: 0 1rem;
 }
 
 @media only screen and (max-width: 480px) {
+    body{
+        min-width: 0;
+    }
+
     .header-laptop{
        display: none;
     }
+
    .header-mobile{
        display: flex;
    }
@@ -209,9 +308,14 @@ aside{
    }
 
    .banner-section{
-    padding: 2rem 0;
+    padding: 2rem 0 0;
     display: block;
    }
+
+   #banner-section-text{
+    padding: 2rem 1rem;
+   }
+
    .banner-img{
     width: 100%;
    }
@@ -226,6 +330,7 @@ aside{
 
     #square-text{
     width: 100%;
+    padding: 4rem 1rem;
     }
     #orientation, #our-campus, #guest-lecture{
         display: block;
@@ -237,6 +342,7 @@ aside{
         border-left: none;
         width: 100%;
         display: block;
+        padding: 1rem 0 2rem;
     }
 
     #orientation{
@@ -266,9 +372,51 @@ aside{
         min-height: 150px;
     }
 
+    #start-learning{
+        flex-direction: column;
+        align-content: center;
+        gap: 0.5rem;
+        background-color: white;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    #start-learning-header{
+        background-color: white;
+    }
+
+    #start-learning .text-square{
+        background-color: lightgrey;
+    }
+
+    #start-learning p, #start-learning img, #start-learning h4{
+    display: none;
+    }
+
+    .center{
+        padding: 2rem 0 1rem;
+    }
+
+    #thesis-exhibit{
+        padding: 0;
+    }
+
+    #thesis-exhibit h2, #thesis-exhibit p, #thesis-articles{
+        display: none;
+    }
+
+    #thesis-exhibit-video-section{
+        width: 100%;
+        padding: 0;
+    }
+
+    .float-right{
+        display: none;
+    }
+
+    footer{
+        margin: 1rem 1rem 2rem;
+    }
+
 
 }
 
-footer{
-    margin: 1rem;
-}
