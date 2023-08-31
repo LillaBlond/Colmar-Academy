@@ -4,7 +4,7 @@
     border: 0;
     font-size: 100%;
     font: inherit;
-   border: 1px solid red;
+   //border: 1px solid red;
    display:block;
    box-sizing: border-box;
 }
@@ -19,23 +19,42 @@ html, body{
 body{
     box-sizing: border-box;
     min-width: 840px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(68, 72, 72);
 }
 
 a{
-    color: rgb(83, 110, 232);
+    color: rgb(83, 165, 232);
 }
 .grey-background{
 background-color: lightgrey;
 }
 
-h4{
-    padding: 0.5rem 0;
+h1{
+font-size: 3rem;
+font-weight: 800;
+margin-bottom: 1rem;
 }
 
 h2{
-    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 750;
+    padding-bottom: 1.5rem;
 }
 
+
+h3{
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+h4{
+    padding-bottom: 1rem;
+}
+
+p{
+    padding-bottom: 1rem;
+}
 /*-- header for full screen */
 .header-laptop{
     height: 64px;
@@ -104,18 +123,20 @@ header li{
     min-width: 240px;
     display: flex;
     flex-flow: column nowrap;
+    gap: 1rem;
     padding: 2rem 3rem 2rem 2rem;
     justify-content: center;
 }
 
-#banner-section-text p, h1{
+#banner-section-text p, #banner-section-text h1{
     padding: 1rem 0;
 }
 
 #banner-section-text #button{
     text-align: center;
-    background-color: grey;
+    background-color: rgb(68, 72, 72);
     color: white;
+    margin-top: 2rem;
 }
 
 /* the second section - information section*/
@@ -132,6 +153,10 @@ width: 100%;
 
 .main-information h1{
     padding: 2rem auto 1.5rem auto;
+}
+
+.main-information img{
+    padding-bottom: 2rem;
 }
 
 aside{
@@ -400,7 +425,7 @@ footer{
         padding: 0;
     }
 
-    #thesis-exhibit h2, #thesis-exhibit p, #thesis-articles{
+    #thesis-exhibit h3, #thesis-exhibit p, #thesis-articles{
         display: none;
     }
 
