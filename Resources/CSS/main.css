@@ -4,23 +4,23 @@
     border: 0;
     font-size: 100%;
     font: inherit;
-   //border: 1px solid red;
-   display:block;
    box-sizing: border-box;
 }
-html, body{
+
+html{
     font-size: 16px;
     margin: 0;
     padding: 0;
     border: 0;
     display:inherit;
+    
 }
 
 body{
     box-sizing: border-box;
-    min-width: 840px;
+    min-width: 930px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(68, 72, 72);
+    color: grey;
 }
 
 a{
@@ -33,28 +33,56 @@ background-color: lightgrey;
 h1{
 font-size: 3rem;
 font-weight: 800;
-margin-bottom: 1rem;
+color: rgb(76, 81, 81);
 }
 
 h2{
     font-size: 2.5rem;
     font-weight: 750;
     padding-bottom: 1.5rem;
+    color: rgb(76, 81, 81);
 }
 
 
 h3{
     font-weight: bold;
-    padding: 1rem 0;
-}
-
-h4{
-    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: rgb(76, 81, 81);
 }
 
 p{
-    padding-bottom: 1rem;
+    line-height: 1.5rem;
 }
+
+aside{
+    font-weight: 600;
+}
+
+footer p{
+    font-size: 0.9rem;
+}
+
+.mobile{
+    display: none;
+}
+
+.header-laptop li{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(76, 81, 81);
+    font-weight: 500;
+}
+
+.header-laptop p{
+    font-size: 1.2rem;
+
+
+}
+
+.logo-text{
+    color: rgb(76, 81, 81);
+    font-weight: bold;
+}
+
 /*-- header for full screen */
 .header-laptop{
     height: 64px;
@@ -77,6 +105,7 @@ p{
     display: flex;
     align-items: center;
 }
+
 
 /*header for mobile screen*/
 .header-mobile{
@@ -120,23 +149,24 @@ header li{
 
 
 #banner-section-text{
-    min-width: 240px;
     display: flex;
     flex-flow: column nowrap;
-    gap: 1rem;
-    padding: 2rem 3rem 2rem 2rem;
+    flex-shrink: 2;
+    gap: 2rem;
+    padding: 2rem 8rem 2rem 2rem;
     justify-content: center;
 }
 
-#banner-section-text p, #banner-section-text h1{
+#banner-section-text p{
     padding: 1rem 0;
 }
 
 #banner-section-text #button{
     text-align: center;
-    background-color: rgb(68, 72, 72);
+    background-color: rgb(76, 81, 81);
     color: white;
-    margin-top: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
 }
 
 /* the second section - information section*/
@@ -226,7 +256,7 @@ aside{
 #square-text{
     display:flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    gap: 0.5rem;
     padding: 3%;
     margin: auto auto auto 0px;
     flex: 0.5 0.5 200px;
@@ -268,6 +298,10 @@ aside{
     padding: 1rem 1rem 1.5rem 1rem;
 }
 
+#start-learning h3, #start-learning h4, #thesis-exhibit-video-section h3{
+    padding-bottom: 0.5rem;
+}
+
 #start-learning img{
     height: auto;
     width: 100%;
@@ -305,7 +339,7 @@ aside{
 }
 
 footer{
-    margin: 0.5rem 1.5rem 3rem;
+    padding: 1rem 1.5rem 3rem;
 }
 .float-left{
     float: left;
@@ -318,6 +352,14 @@ footer{
 @media only screen and (max-width: 480px) {
     body{
         min-width: 0;
+    }
+
+    .laptop{
+        display: none;
+    }
+
+    .mobile{
+        display:contents;
     }
 
     .header-laptop{
@@ -341,6 +383,10 @@ footer{
     padding: 2rem 1rem;
    }
 
+   #banner-section-text #button{
+    background-color: rgb(143, 143, 143);
+   }
+
    .banner-img{
     width: 100%;
    }
@@ -357,6 +403,12 @@ footer{
     width: 100%;
     padding: 4rem 1rem;
     }
+
+    #guest-lecture  #square-text{
+        width: 100%;
+        padding: 4rem 1rem 2rem;
+        }
+    
     #orientation, #our-campus, #guest-lecture{
         display: block;
         width: 100%;
@@ -367,7 +419,7 @@ footer{
         border-left: none;
         width: 100%;
         display: block;
-        padding: 1rem 0 2rem;
+        padding: 1rem 0 0;
     }
 
     #orientation{
@@ -403,6 +455,7 @@ footer{
         gap: 0.5rem;
         background-color: white;
         border-bottom: 1px solid lightgrey;
+        padding: 0 0 2rem;
     }
 
     #start-learning-header{
@@ -416,6 +469,13 @@ footer{
     #start-learning p, #start-learning img, #start-learning h4{
     display: none;
     }
+
+    #software-engineering, #computer-art, #design, #data, #business, #marketing{
+        max-width:90%;
+        min-width: 90%;
+
+    }
+
 
     .center{
         padding: 2rem 0 1rem;
@@ -439,7 +499,7 @@ footer{
     }
 
     footer{
-        margin: 1rem 1rem 2rem;
+        padding: 1rem 1rem 2rem;
     }
 
 
