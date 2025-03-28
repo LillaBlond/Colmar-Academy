@@ -139,6 +139,7 @@ header li{
 .banner-section{
     padding: 2rem 1.5rem;
     display: flex;
+    gap: 20px;
     width: 100%
 }
 
@@ -153,7 +154,6 @@ header li{
     flex-flow: column nowrap;
     flex-shrink: 2;
     gap: 2rem;
-    padding: 2rem 8rem 2rem 2rem;
     justify-content: center;
 }
 
